@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Elhadj Diattara</title>
+  <meta name="description" content="Projets d'infrastructures systèmes et réseaux réalisés par Elhadj Diattara : audit de sécurité, Active Directory, PKI, haute disponibilité, virtualisation et cloud hybride." />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       EN-TÊTE : le bouton "Menu" est un élément <details> natif,
+       identique sur ordinateur et sur mobile.
+       ============================================================ -->
+  <header class="header">
+    <div class="container header__row">
+      <details class="menu">
+        <summary class="menu__button">
+          <span class="menu__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </summary>
+        <nav class="menu__panel" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="skills.html">Compétences</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="projects.html">Projets</a>
+          <a href="parcours.html">Parcours</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </details>
+      <a class="btn btn--primary btn--sm" href="contact.html">Me contacter</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section">
+      <div class="container">
+        <h1 class="page-intro__title">Projets</h1>
+        <p class="page-intro__lead">Des infrastructures conçues, déployées et sécurisées de bout en bout, dans une logique proche d'un environnement professionnel réel. Cinq projets d'infrastructure.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+
+        <article class="project">
+          <div class="project__head">
+            <div>
+              <h2 class="project__title">Audit de sécurité &amp; réponse à incident, NexaTech</h2>
+              <p class="project__objective">Réaliser un audit de sécurité complet suite à une intrusion : analyse forensique, correction des vulnérabilités et durcissement du serveur (posture Blue Team).</p>
+            </div>
+          </div>
+          <div class="project__tags">
+            <span class="tag">PHP</span><span class="tag">SQLite3</span><span class="tag">Apache2</span>
+            <span class="tag">SSH</span><span class="tag">UFW</span><span class="tag">Bash</span>
+          </div>
+          <button class="project__toggle" data-project-toggle aria-expanded="false">
+            <span>Voir le détail</span>
+            <svg class="icon"><use href="#icon-chevron-down"></use></svg>
+          </button>
+          <div class="project__details">
+            <div class="project__details-inner">
+              <div>
+                <p class="project__skills-title">Réalisations</p>
+                <ul class="project__list">
+                  <li>Reconstruction de la timeline de l'attaque à partir des logs et profilage des IP attaquantes.</li>
+                  <li>Identification de 13 failles de sécurité (OWASP Top 10) sur 6 fichiers PHP.</li>
+                  <li>Correction des injections SQL par requêtes préparées (PDO).</li>
+                  <li>Correction des failles XSS, IDOR et LFI.</li>
+                  <li>Sécurisation des mots de passe (hashage bcrypt) et protection CSRF.</li>
+                  <li>Durcissement de la configuration SSH (désactivation du root, limitation des tentatives).</li>
+                  <li>Configuration du pare-feu UFW avec blocage des IP malveillantes.</li>
+                  <li>Développement de scripts Bash d'audit de sécurité automatisé.</li>
+                  <li>Nettoyage et restauration de la base de données compromise.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="project__skills-title">Compétences mobilisées</p>
+                <div class="project__badges">
+                  <span class="tag">OWASP Top 10</span><span class="tag">PHP sécurisé</span><span class="tag">SSH</span>
+                  <span class="tag">UFW</span><span class="tag">Forensique</span><span class="tag">Bash</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <div>
+              <h2 class="project__title">Infrastructure sécurisée et centralisée</h2>
+              <p class="project__objective">Concevoir et déployer une infrastructure web sécurisée, avec serveurs Linux durcis et accès distants protégés.</p>
+            </div>
+          </div>
+          <div class="project__tags">
+            <span class="tag">Linux</span><span class="tag">SSH</span><span class="tag">HTTPS</span>
+            <span class="tag">PKI</span><span class="tag">Reverse Proxy</span><span class="tag">IDS</span>
+          </div>
+          <button class="project__toggle" data-project-toggle aria-expanded="false">
+            <span>Voir le détail</span>
+            <svg class="icon"><use href="#icon-chevron-down"></use></svg>
+          </button>
+          <div class="project__details">
+            <div class="project__details-inner">
+              <div>
+                <p class="project__skills-title">Réalisations</p>
+                <ul class="project__list">
+                  <li>Conception et déploiement d'une infrastructure web sécurisée.</li>
+                  <li>Mise en place de serveurs Linux sécurisés (serveur web et passerelle).</li>
+                  <li>Sécurisation des accès via authentification SSH renforcée (OTP) et désactivation de l'accès root.</li>
+                  <li>Configuration du chiffrement des communications (HTTPS) avec mise en place d'un reverse proxy et PKI.</li>
+                  <li>Déploiement de solutions de détection d'intrusion réseau (IDS).</li>
+                </ul>
+              </div>
+              <div>
+                <p class="project__skills-title">Compétences mobilisées</p>
+                <div class="project__badges">
+                  <span class="tag">Administration Linux</span><span class="tag">SSH</span><span class="tag">PKI</span>
+                  <span class="tag">Reverse Proxy</span><span class="tag">Détection d'intrusion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <div>
+              <h2 class="project__title">Déploiement AD &amp; GPO, Windows Server 2025</h2>
+              <p class="project__objective">Structurer un domaine Active Directory et automatiser la configuration des postes via GPO.</p>
+            </div>
+          </div>
+          <div class="project__tags">
+            <span class="tag">Windows Server 2025</span><span class="tag">Active Directory</span><span class="tag">GPO</span>
+          </div>
+          <button class="project__toggle" data-project-toggle aria-expanded="false">
+            <span>Voir le détail</span>
+            <svg class="icon"><use href="#icon-chevron-down"></use></svg>
+          </button>
+          <div class="project__details">
+            <div class="project__details-inner">
+              <div>
+                <p class="project__skills-title">Réalisations</p>
+                <ul class="project__list">
+                  <li>Conception et déploiement d'une arborescence d'Unités d'Organisation (OU).</li>
+                  <li>Configuration de GPO d'environnement utilisateur.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="project__skills-title">Compétences mobilisées</p>
+                <div class="project__badges">
+                  <span class="tag">Active Directory</span><span class="tag">GPO</span><span class="tag">Administration Windows</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <div>
+              <h2 class="project__title">Infrastructure Active Directory hautement disponible</h2>
+              <p class="project__objective">Garantir la continuité de service d'un domaine Windows grâce à la redondance des contrôleurs de domaine.</p>
+            </div>
+          </div>
+          <div class="project__tags">
+            <span class="tag">Windows Server 2022</span><span class="tag">Active Directory</span><span class="tag">DNS</span>
+          </div>
+          <button class="project__toggle" data-project-toggle aria-expanded="false">
+            <span>Voir le détail</span>
+            <svg class="icon"><use href="#icon-chevron-down"></use></svg>
+          </button>
+          <div class="project__details">
+            <div class="project__details-inner">
+              <div>
+                <p class="project__skills-title">Réalisations</p>
+                <ul class="project__list">
+                  <li>Installation de deux contrôleurs de domaine.</li>
+                  <li>Configuration de la réplication Active Directory.</li>
+                  <li>Réplication du service DNS.</li>
+                  <li>Vérification avec repadmin.</li>
+                  <li>Diagnostic avec dcdiag.</li>
+                  <li>Gestion et compréhension des rôles FSMO.</li>
+                  <li>Tests de panne pour vérifier la continuité de service.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="project__skills-title">Compétences mobilisées</p>
+                <div class="project__badges">
+                  <span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">DNS</span>
+                  <span class="tag">Haute disponibilité</span><span class="tag">Administration Microsoft</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <div>
+              <h2 class="project__title">Refonte sécurisée d'une infrastructure d'entreprise, Datanova</h2>
+              <p class="project__objective">Concevoir et déployer une infrastructure d'entreprise virtualisée, sécurisée et segmentée, reproduisant un environnement professionnel.</p>
+            </div>
+          </div>
+          <div class="project__tags">
+            <span class="tag">Proxmox VE</span><span class="tag">pfSense / OPNsense</span><span class="tag">Windows Server</span>
+            <span class="tag">Linux (Debian)</span><span class="tag">Active Directory</span><span class="tag">DNS</span>
+            <span class="tag">AWS</span><span class="tag">VPN</span><span class="tag">Bastion</span><span class="tag">HTTPS</span>
+          </div>
+          <button class="project__toggle" data-project-toggle aria-expanded="false">
+            <span>Voir le détail</span>
+            <svg class="icon"><use href="#icon-chevron-down"></use></svg>
+          </button>
+          <div class="project__details">
+            <div class="project__details-inner">
+              <div>
+                <p class="project__skills-title">Réalisations</p>
+                <ul class="project__list">
+                  <li>Déploiement d'une infrastructure virtualisée sous Proxmox VE.</li>
+                  <li>Mise en place d'un cluster haute disponibilité (HA).</li>
+                  <li>Segmentation du réseau (Admin / Infrastructure / Production / DMZ).</li>
+                  <li>Configuration d'un pare-feu pfSense/OPNsense et filtrage des flux.</li>
+                  <li>Déploiement d'un bastion d'administration sécurisé.</li>
+                  <li>Mise en place d'une architecture cloud hybride AWS avec VPN site-à-site.</li>
+                  <li>Déploiement des services Active Directory et DNS.</li>
+                  <li>Application de techniques de hardening sur Windows et Linux.</li>
+                  <li>Documentation complète de l'architecture.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="project__skills-title">Compétences mobilisées</p>
+                <div class="project__badges">
+                  <span class="tag">Virtualisation</span><span class="tag">Réseau</span><span class="tag">Administration Windows/Linux</span>
+                  <span class="tag">Sécurité</span><span class="tag">Haute disponibilité</span><span class="tag">Cloud hybride</span><span class="tag">Travail en équipe</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      <div class="container">
+        <nav class="page-foot__nav">
+          <a class="page-foot__link page-foot__link--prev" href="certifications.html">
+            <span class="page-foot__link-cue">Précédent</span>
+            <span class="page-foot__link-name">Certifications</span>
+          </a>
+          <a class="page-foot__link page-foot__link--next" href="parcours.html">
+            <span class="page-foot__link-cue">Suivant</span>
+            <span class="page-foot__link-name">Parcours</span>
+          </a>
+        </nav>
+        <div class="page-foot__copyright">© <span data-current-year></span> Elhadj Diattara.</div>
+      </div>
+    </footer>
+  </main>
+
+  <svg style="position:absolute; width:0; height:0; overflow:hidden" aria-hidden="true">
+    <defs>
+      <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><line x1="5" y1="20" x2="19" y2="20"/></symbol>
+      <symbol id="icon-file-text" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><polyline points="14 3 14 8 19 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="16.5" x2="14" y2="16.5"/></symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24"><line x1="21" y1="3" x2="10" y2="14"/><polygon points="21 3 14.5 21 10 14 3 9.5 21 3"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></symbol>
+    </defs>
+  </svg>
+
+  <script src="js/menu.js" defer></script>
+  <script src="js/projects.js" defer></script>
+</body>
+</html>

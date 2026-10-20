@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications — Elhadj Diattara</title>
+  <meta name="description" content="Certifications d'Elhadj Diattara : CNIL, Cisco Networking Academy et préparation à la certification CCNA." />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       EN-TÊTE : le bouton "Menu" est un élément <details> natif,
+       identique sur ordinateur et sur mobile.
+       ============================================================ -->
+  <header class="header">
+    <div class="container header__row">
+      <details class="menu">
+        <summary class="menu__button">
+          <span class="menu__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </summary>
+        <nav class="menu__panel" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="skills.html">Compétences</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="projects.html">Projets</a>
+          <a href="parcours.html">Parcours</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </details>
+      <a class="btn btn--primary btn--sm" href="contact.html">Me contacter</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section">
+      <div class="container">
+        <h1 class="page-intro__title">Certifications</h1>
+        <p class="page-intro__lead">Mes certifications obtenues et mes formations en cours.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="certs-list">
+
+          <div class="cert-row">
+            <div class="cert-row__mark cert-row__mark--done"><svg class="icon"><use href="#icon-check"></use></svg></div>
+            <div>
+              <h3 class="cert-row__name">L'Atelier RGPD</h3>
+              <p class="cert-row__issuer">Délivrée par la CNIL</p>
+            </div>
+            <div class="cert-row__right">
+              <span class="cert-row__status cert-row__status--done">Obtenue</span>
+              <span class="cert-row__date">Janvier 2026</span>
+            </div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-row__mark cert-row__mark--done"><svg class="icon"><use href="#icon-check"></use></svg></div>
+            <div>
+              <h3 class="cert-row__name">Linux Unhatched</h3>
+              <p class="cert-row__issuer">Délivrée par Cisco</p>
+            </div>
+            <div class="cert-row__right">
+              <span class="cert-row__status cert-row__status--done">Obtenue</span>
+              <span class="cert-row__date">Avril 2026</span>
+            </div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-row__mark cert-row__mark--pending"></div>
+            <div>
+              <h3 class="cert-row__name">CCNA, Cisco Certified Network Associate</h3>
+              <p class="cert-row__issuer">Cisco Networking Academy (NetAcad)</p>
+            </div>
+            <div class="cert-row__right">
+              <span class="cert-row__status cert-row__status--pending">En préparation</span>
+              <span class="cert-row__date">Depuis mars 2026</span>
+            </div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-row__mark cert-row__mark--pending"></div>
+            <div>
+              <h3 class="cert-row__name">Jr Penetration Tester, parcours de formation</h3>
+              <p class="cert-row__issuer">TryHackMe</p>
+            </div>
+            <div class="cert-row__right">
+              <span class="cert-row__status cert-row__status--pending">En cours</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      <div class="container">
+        <nav class="page-foot__nav">
+          <a class="page-foot__link page-foot__link--prev" href="skills.html">
+            <span class="page-foot__link-cue">Précédent</span>
+            <span class="page-foot__link-name">Compétences</span>
+          </a>
+          <a class="page-foot__link page-foot__link--next" href="projects.html">
+            <span class="page-foot__link-cue">Suivant</span>
+            <span class="page-foot__link-name">Projets</span>
+          </a>
+        </nav>
+        <div class="page-foot__copyright">© <span data-current-year></span> Elhadj Diattara.</div>
+      </div>
+    </footer>
+  </main>
+
+  <svg style="position:absolute; width:0; height:0; overflow:hidden" aria-hidden="true">
+    <defs>
+      <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><line x1="5" y1="20" x2="19" y2="20"/></symbol>
+      <symbol id="icon-file-text" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><polyline points="14 3 14 8 19 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="16.5" x2="14" y2="16.5"/></symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24"><line x1="21" y1="3" x2="10" y2="14"/><polygon points="21 3 14.5 21 10 14 3 9.5 21 3"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></symbol>
+    </defs>
+  </svg>
+
+  <script src="js/menu.js" defer></script>
+</body>
+</html>

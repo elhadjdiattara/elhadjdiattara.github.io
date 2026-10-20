@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — Elhadj Diattara</title>
+  <meta name="description" content="Parcours et motivation d'Elhadj Diattara, étudiant en Administration Systèmes, Réseaux et Cybersécurité à l'IPSSI Paris." />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       EN-TÊTE : le bouton "Menu" est un élément <details> natif,
+       identique sur ordinateur et sur mobile.
+       ============================================================ -->
+  <header class="header">
+    <div class="container header__row">
+      <details class="menu">
+        <summary class="menu__button">
+          <span class="menu__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </summary>
+        <nav class="menu__panel" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="skills.html">Compétences</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="projects.html">Projets</a>
+          <a href="parcours.html">Parcours</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </details>
+      <a class="btn btn--primary btn--sm" href="contact.html">Me contacter</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============================================================
+         PRÉSENTATION (méthode P.R.O.F.)
+         P : nom, formation, année          R : ce qui m'intéresse
+         O : mon objectif                   F : mes forces
+         Le texte fait 5 à 7 lignes et se lit en 15 secondes.
+         ============================================================ -->
+    <section class="section">
+      <div class="container">
+        <h1 class="page-intro__title">À propos</h1>
+        <p class="about__statement">
+          Je m'appelle Elhadj Diattara, étudiant en 3<sup>e</sup> année de Bachelor Systèmes,
+          Réseaux et Cybersécurité à l'IPSSI Paris. Je m'intéresse à l'administration des
+          serveurs et des réseaux, à la virtualisation et à la cybersécurité. Je prépare la
+          certification Cisco CCNA et je cherche un contrat d'apprentissage de 12 mois pour
+          mettre en pratique ce que j'apprends et me spécialiser en cybersécurité. Je suis
+          rigoureux, autonome, discipliné et à l'aise en équipe.
+        </p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container about__grid">
+        <div>
+          <img class="about__photo" src="assets/images/portrait-elhadj.jpg" width="720" height="900" alt="Portrait d'Elhadj Diattara" />
+          <dl class="facts">
+            <div class="facts__row"><dt>École</dt><dd>IPSSI Paris</dd></div>
+            <div class="facts__row"><dt>Formation</dt><dd>Bachelor Systèmes, Réseaux &amp; Cybersécurité, 2025 à 2027</dd></div>
+            <div class="facts__row"><dt>Recherche</dt><dd>Contrat d'apprentissage de 12 mois, 3 semaines en entreprise et 1 semaine en formation</dd></div>
+          </dl>
+        </div>
+
+        <!-- Mes forces, en quelques mots (celles de mon CV) -->
+        <div>
+          <h2 class="about__h2">Mes points forts</h2>
+          <ul class="strengths">
+            <li>Rigueur</li>
+            <li>Autonomie</li>
+            <li>Discipline</li>
+            <li>Travail d'équipe</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      <div class="container">
+        <nav class="page-foot__nav">
+          <a class="page-foot__link page-foot__link--prev" href="index.html">
+            <span class="page-foot__link-cue">Précédent</span>
+            <span class="page-foot__link-name">Accueil</span>
+          </a>
+          <a class="page-foot__link page-foot__link--next" href="skills.html">
+            <span class="page-foot__link-cue">Suivant</span>
+            <span class="page-foot__link-name">Compétences</span>
+          </a>
+        </nav>
+        <div class="page-foot__copyright">© <span data-current-year></span> Elhadj Diattara.</div>
+      </div>
+    </footer>
+  </main>
+
+  <svg style="position:absolute; width:0; height:0; overflow:hidden" aria-hidden="true">
+    <defs>
+      <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><line x1="5" y1="20" x2="19" y2="20"/></symbol>
+      <symbol id="icon-file-text" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><polyline points="14 3 14 8 19 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="16.5" x2="14" y2="16.5"/></symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24"><line x1="21" y1="3" x2="10" y2="14"/><polygon points="21 3 14.5 21 10 14 3 9.5 21 3"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></symbol>
+    </defs>
+  </svg>
+
+  <script src="js/menu.js" defer></script>
+</body>
+</html>
