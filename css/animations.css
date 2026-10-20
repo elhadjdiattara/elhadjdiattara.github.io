@@ -1,0 +1,42 @@
+/* ============================================================
+   ANIMATIONS.CSS
+   ------------------------------------------------------------
+   Une seule animation "d'ambiance" sur tout le site : à
+   l'ouverture de la page d'accueil, le nom monte dans le bloc
+   bleu, puis le reste du texte apparaît. Tout le reste ne bouge
+   qu'en réponse à un geste (survol, clic) : voir les "transition"
+   dans les autres fichiers.
+   Les visiteurs qui ont désactivé les animations dans leur
+   système ne voient rien bouger (règle dans reset.css).
+   ============================================================ */
+
+@keyframes rise {
+  from { transform: translateY(105%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Le nom : chaque ligne monte depuis sous son cadre (le cadre
+   cache ce qui dépasse), la deuxième ligne avec un léger retard */
+.hero__line > span {
+  animation: rise 0.9s var(--ease) both;
+}
+.hero__line:nth-child(2) > span {
+  animation-delay: 0.1s;
+}
+
+/* Le reste du bloc apparaît une fois le nom en place */
+.hero__role,
+.hero__text,
+.hero__actions {
+  animation: fade 0.8s var(--ease) 0.45s both;
+}
+
+/* Ouverture du menu : un court fondu (réponse au clic) */
+.menu[open] .menu__panel {
+  animation: fade 0.2s var(--ease);
+}

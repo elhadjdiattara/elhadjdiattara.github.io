@@ -1,0 +1,171 @@
+/* ============================================================
+   BASE.CSS
+   ------------------------------------------------------------
+   Police, typographie de base, mise en page générale, boutons
+   et étiquettes : tout ce qui est partagé par toutes les pages.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   POLICE : Archivo, hébergée dans le projet (assets/fonts/).
+   Un seul fichier "variable" contient toutes les graisses (100 à
+   900) et toutes les largeurs (62 % à 125 %) : pas besoin d'un
+   fichier par style. Le site n'utilise pas d'italique.
+   Licence : SIL Open Font License (Archivo-OFL.txt).
+   ------------------------------------------------------------ */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("../assets/fonts/archivo-latin-wdth-normal.woff2") format("woff2");
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+}
+
+/* ---------- TITRES ----------
+   h1 et h2 : version large (font-stretch 125 %) et très grasse,
+   c'est le trait distinctif du site. h3 : graisse moyenne,
+   largeur normale, pour rester sobre dans les listes. */
+h1, h2 {
+  font-weight: 800;
+  font-stretch: 125%;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+h3, h4 {
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-lg); }
+
+p {
+  color: var(--ink-soft);
+  max-width: 66ch;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+/* Focus visible au clavier : un anneau bleu, jamais supprimé */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   MISE EN PAGE GÉNÉRALE
+   ------------------------------------------------------------
+   Tout est aligné sur le même bord gauche, de l'en-tête au pied
+   de page. Les blocs de texte ont leur propre largeur maximale
+   pour rester agréables à lire.
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.section {
+  padding-block: var(--space-section) var(--space-lg);
+}
+
+.section--tight {
+  padding-block: var(--space-md) var(--space-section);
+}
+
+/* ---------- INTRODUCTION DE PAGE ----------
+   Chaque page s'ouvre directement sur son titre : pas d'étiquette
+   décorative au-dessus, le titre et le texte d'intro suffisent. */
+.page-intro__title {
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--space-md);
+}
+
+.page-intro__lead {
+  font-size: var(--fs-lg);
+  max-width: 54ch;
+  line-height: 1.5;
+}
+
+/* ---------- BOUTONS ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font-weight: 650;
+  font-size: var(--fs-sm);
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: background-color var(--duration-fast), color var(--duration-fast),
+              border-color var(--duration-fast);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover { background: var(--accent-deep); }
+
+.btn--ghost {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.btn--ghost:hover { background: var(--ink); color: #fff; }
+
+.btn--sm {
+  padding: 0.55rem 1.1rem;
+}
+
+/* Variantes pour les boutons posés sur le grand bloc bleu */
+.btn--light {
+  background: #fff;
+  color: var(--accent-deep);
+}
+.btn--light:hover { background: var(--accent-tint); }
+
+.btn--outline-light {
+  border-color: #fff;
+  color: #fff;
+}
+.btn--outline-light:hover { background: #fff; color: var(--accent-deep); }
+
+/* ---------- ICÔNES ---------- */
+.icon {
+  width: 1.1em;
+  height: 1.1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* ---------- ÉTIQUETTES (technologies) ---------- */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+}

@@ -1,0 +1,70 @@
+/* ============================================================
+   VARIABLES.CSS
+   ------------------------------------------------------------
+   IDENTITÉ VISUELLE
+   Fond blanc, texte bleu marine, UN seul bleu vif (outremer)
+   pour les actions et pour le grand bloc de l'accueil. Pas de
+   dégradé, pas d'ombre, pas de cartes : la hiérarchie vient de
+   la taille, de la graisse et de la largeur de la police.
+   Toutes les couleurs et les tailles du site sont ici : pour
+   changer l'apparence, on modifie ce fichier.
+   ============================================================ */
+
+:root {
+  /* ---------- COULEURS ---------- */
+  --bg: #FFFFFF;
+  --surface: #F3F5FB;        /* fond très léger (lignes survolées, étiquettes) */
+
+  --ink: #0C1633;            /* texte principal : bleu marine très foncé */
+  --ink-soft: #47516B;       /* texte secondaire */
+  --ink-faint: #5A6480;      /* petites légendes (reste lisible : 5,9:1) */
+
+  --line: #E1E5F0;           /* filets de séparation */
+
+  --accent: #2A3FFF;         /* bleu outremer : boutons, liens, grand bloc */
+  --accent-deep: #1A2BD6;    /* même bleu, plus foncé (survol, texte sur fond clair) */
+  --accent-tint: #E9ECFF;    /* même bleu, très pâle (fond au survol) */
+  --on-accent-soft: #DDE2FF; /* texte secondaire posé sur le bleu */
+
+  --ok: #0E7A4F;            /* vert : uniquement "Obtenue" */
+  --error: #B3261E;         /* rouge : uniquement les erreurs de formulaire */
+
+  /* ---------- TYPOGRAPHIE ---------- */
+  /* Une seule famille : Archivo. Sa police "variable" permet de
+     régler la graisse (font-weight) ET la largeur (font-stretch) :
+     les grands titres sont écrits en version large et très grasse,
+     le texte courant en version normale. Le fichier est dans
+     assets/fonts/ (voir @font-face dans base.css). */
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+  --fs-xs: clamp(0.8rem, 0.78rem + 0.1vw, 0.86rem);
+  --fs-sm: clamp(0.9rem, 0.87rem + 0.15vw, 0.97rem);
+  --fs-base: clamp(1rem, 0.96rem + 0.2vw, 1.08rem);
+  --fs-lg: clamp(1.15rem, 1.06rem + 0.4vw, 1.35rem);
+  --fs-xl: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  --fs-2xl: clamp(1.8rem, 1.35rem + 1.8vw, 2.6rem);
+  --fs-3xl: clamp(2.1rem, 1.1rem + 4.2vw, 4.4rem);
+  --fs-hero: clamp(3.4rem, 1.2rem + 11vw, 11rem);
+
+  /* ---------- ESPACEMENTS ---------- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-section: clamp(3.5rem, 7vw, 6.5rem);
+
+  /* ---------- MISE EN PAGE ---------- */
+  --container: 1200px;
+  --container-padding: clamp(1.25rem, 5vw, 3rem);
+  --radius: 10px;            /* un seul rayon d'arrondi pour les boutons et les champs */
+
+  /* ---------- EN-TÊTE ---------- */
+  --header-height: 64px;
+  --z-header: 800;
+
+  /* ---------- TRANSITIONS ---------- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.15s;
+  --duration-base: 0.3s;
+}

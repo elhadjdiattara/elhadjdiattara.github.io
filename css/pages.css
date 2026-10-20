@@ -1,0 +1,551 @@
+/* ============================================================
+   PAGES.CSS
+   ------------------------------------------------------------
+   Les styles propres à chaque page, dans l'ordre du menu. Les
+   règles "responsive" (@media) sont placées juste après le bloc
+   qu'elles modifient.
+   ============================================================ */
+
+/* ============================================================
+   ACCUEIL
+   ------------------------------------------------------------
+   Un grand bloc bleu avec le nom en très grand : c'est le seul
+   endroit du site où la couleur couvre une surface entière.
+   ============================================================ */
+.hero {
+  background: var(--accent);
+  color: #fff;
+  padding-block: clamp(3.5rem, 9vw, 7rem) clamp(3rem, 7vw, 5.5rem);
+}
+
+.hero__name {
+  margin-bottom: var(--space-lg);
+  font-size: var(--fs-hero);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  color: #fff;
+}
+
+/* Chaque ligne du nom a un cadre qui cache ce qui dépasse :
+   c'est ce qui permet à l'animation de "faire monter" le texte
+   (voir animations.css). Le padding évite de couper le bas des
+   lettres comme le "j". */
+.hero__line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.hero__line > span { display: block; }
+
+.hero__role {
+  max-width: 24ch;
+  margin-bottom: var(--space-sm);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.hero__text {
+  max-width: 36ch;
+  margin-bottom: var(--space-md);
+  font-size: var(--fs-lg);
+  color: var(--on-accent-soft);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* Liste des pages, sous le bloc bleu */
+.explore__title {
+  margin-bottom: var(--space-md);
+  font-size: var(--fs-xl);
+}
+
+.explore {
+  border-top: 2px solid var(--ink);
+}
+
+.explore__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: var(--space-md);
+  align-items: baseline;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: background-color var(--duration-base), padding var(--duration-base) var(--ease);
+}
+
+.explore__name {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  transition: color var(--duration-fast);
+}
+
+.explore__desc { color: var(--ink-soft); }
+
+.explore__item:hover {
+  background: var(--accent-tint);
+  padding-inline: 1rem;
+}
+.explore__item:hover .explore__name { color: var(--accent-deep); }
+
+@media (max-width: 640px) {
+  .explore__item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+/* ============================================================
+   À PROPOS
+   ------------------------------------------------------------
+   Le texte de présentation (5 à 7 lignes) est en grand, tout en
+   haut : il doit se lire en 15 secondes. En dessous : la photo,
+   les infos clés, puis les trois points forts avec leur preuve.
+   ============================================================ */
+.about__statement {
+  max-width: 60ch;
+  font-size: clamp(1.15rem, 0.95rem + 1.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.about__photo {
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius);
+}
+
+.facts__row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-block: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+.facts__row:last-child { border-bottom: 1px solid var(--line); }
+
+.facts dt {
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+}
+
+.facts dd {
+  font-weight: 650;
+}
+
+.about__h2 {
+  margin-bottom: var(--space-md);
+  font-size: var(--fs-xl);
+}
+
+.strengths { border-top: 2px solid var(--ink); }
+
+.strengths li {
+  padding-block: 1.7rem;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+@media (max-width: 860px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .about__photo { max-width: 340px; }
+}
+
+/* ============================================================
+   COMPÉTENCES
+   ------------------------------------------------------------
+   Sept domaines répartis sur deux colonnes : pour chaque
+   compétence, son nom et une phrase qui dit ce que j'en fais.
+   ============================================================ */
+.skills-columns {
+  column-count: 2;
+  column-gap: var(--space-xl);
+}
+
+.skill-domain {
+  break-inside: avoid;        /* un domaine ne se coupe pas entre deux colonnes */
+  margin-bottom: var(--space-xl);
+}
+
+.skill-domain__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.skill-domain__head h3 {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+}
+
+.skill-domain__count {
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.skill-row {
+  padding-block: 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-row__name {
+  display: block;
+  font-weight: 650;
+}
+
+.skill-row__desc {
+  margin-top: 0.2rem;
+  font-size: var(--fs-sm);
+}
+
+
+@media (max-width: 900px) {
+  .skills-columns { column-count: 1; }
+}
+
+/* ============================================================
+   CERTIFICATIONS
+   ============================================================ */
+.certs-list {
+  max-width: 52rem;
+  border-top: 2px solid var(--ink);
+}
+
+.cert-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Pastille : pleine et bleue si la certification est obtenue,
+   vide en pointillés si elle est en préparation */
+.cert-row__mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.cert-row__mark--done {
+  background: var(--accent);
+  color: #fff;
+}
+.cert-row__mark--pending {
+  border: 2px dashed var(--ink-faint);
+}
+
+.cert-row__name {
+  font-size: var(--fs-xl);
+  font-weight: 750;
+  letter-spacing: -0.015em;
+}
+
+.cert-row__issuer { font-size: var(--fs-sm); }
+
+.cert-row__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+  text-align: right;
+}
+
+.cert-row__status { font-weight: 650; }
+.cert-row__status--done { color: var(--ok); }
+.cert-row__status--pending { color: var(--ink-soft); }
+
+.cert-row__date {
+  font-size: var(--fs-sm);
+  color: var(--ink-faint);
+}
+
+@media (max-width: 560px) {
+  .cert-row { grid-template-columns: auto minmax(0, 1fr); }
+  .cert-row__right {
+    grid-column: 2;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* ============================================================
+   PROJETS
+   ------------------------------------------------------------
+   Chaque projet : titre, objectif, technologies, puis un bouton
+   qui déplie le détail (voir js/projects.js).
+   ============================================================ */
+.project {
+  max-width: 58rem;
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--line);
+}
+.project:first-child { border-top: 2px solid var(--ink); }
+
+.project__title {
+  margin-bottom: 0.75rem;
+  font-size: var(--fs-xl);
+  font-stretch: 112%;
+  line-height: 1.15;
+}
+
+.project__objective {
+  max-width: 60ch;
+  margin-bottom: var(--space-sm);
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.project__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 0.4rem;
+  font-weight: 650;
+  color: var(--accent-deep);
+}
+.project__toggle:hover { text-decoration: underline; text-underline-offset: 0.25em; }
+
+.project__toggle .icon { transition: transform var(--duration-base) var(--ease); }
+.project.is-open .project__toggle .icon { transform: rotate(180deg); }
+
+/* Le détail est replié (hauteur 0) ; js/projects.js règle la
+   hauteur exacte à l'ouverture pour que la transition soit fluide */
+.project__details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s var(--ease);
+}
+
+.project__details-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: var(--space-lg);
+  padding-top: var(--space-md);
+}
+
+.project__skills-title {
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.project__list li {
+  position: relative;
+  margin-bottom: 0.55rem;
+  padding-left: 1.2rem;
+  color: var(--ink-soft);
+}
+.project__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.project__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 760px) {
+  .project__details-inner { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   PARCOURS
+   ------------------------------------------------------------
+   Liste chronologique : la période à gauche, le contenu à droite.
+   ============================================================ */
+.history {
+  max-width: 60rem;
+  border-top: 2px solid var(--ink);
+}
+
+.history-entry {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--line);
+}
+
+.history-entry__when {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.history-entry__period { font-weight: 650; }
+
+.history-entry__type {
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+}
+
+.history-entry__title {
+  margin-bottom: 0.4rem;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.history-entry__desc { margin-bottom: 0.8rem; }
+
+.history-entry__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .history-entry {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* ============================================================
+   CONTACT
+   ------------------------------------------------------------
+   À gauche : les coordonnées. À droite : le formulaire.
+   Les classes .has-error et .is-success / .is-error sont
+   ajoutées par js/contact-form.js.
+   ============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.contact-info { border-top: 2px solid var(--ink); }
+
+.contact-info__row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-block: 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-info__label {
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+}
+
+.contact-info__value {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  transition: color var(--duration-fast);
+}
+.contact-info__value:hover { color: var(--accent); }
+
+.contact-info__cv { margin-top: var(--space-md); }
+
+/* ---------- Formulaire ---------- */
+.field { margin-bottom: var(--space-md); }
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.field__label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: var(--fs-sm);
+  font-weight: 650;
+}
+
+.field__control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  transition: border-color var(--duration-fast);
+}
+
+.field__control::placeholder { color: var(--ink-faint); }
+.field__control:hover { border-color: var(--ink-faint); }
+.field__control:focus { border-color: var(--accent); }
+
+textarea.field__control {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.field.has-error .field__control { border-color: var(--error); }
+
+.field__error {
+  display: block;
+  min-height: 1.1em;
+  margin-top: 0.3rem;
+  font-size: var(--fs-xs);
+  color: var(--error);
+}
+
+.form-status {
+  min-height: 1.4em;
+  margin-top: var(--space-sm);
+  font-size: var(--fs-sm);
+  font-weight: 650;
+}
+.form-status.is-success { color: var(--ok); }
+.form-status.is-error { color: var(--error); }
+
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .field-row { grid-template-columns: 1fr; }
+}

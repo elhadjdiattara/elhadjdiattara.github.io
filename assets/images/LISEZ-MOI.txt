@@ -1,0 +1,10 @@
+Ce dossier contient la seule image du site : portrait-elhadj.jpg,
+affichée sur la page "À propos" (balise <img class="about__photo">
+dans about.html).
+
+Pour changer la photo, remplace simplement ce fichier par une autre
+image au même nom (idéalement au format portrait 4:5, par exemple
+720 x 900 pixels).
+
+Pense à la compresser (format .jpg ou .webp optimisé, une centaine de
+Ko suffisent) pour que la page reste rapide à charger.
