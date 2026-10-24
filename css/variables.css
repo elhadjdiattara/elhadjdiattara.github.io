@@ -1,6 +1,6 @@
-/* ============================================================
+/*
    VARIABLES.CSS
-   ------------------------------------------------------------
+   
    IDENTITÉ VISUELLE
    Fond blanc, texte bleu marine, UN seul bleu vif (outremer)
    pour les actions et pour le grand bloc de l'accueil. Pas de
@@ -8,7 +8,7 @@
    la taille, de la graisse et de la largeur de la police.
    Toutes les couleurs et les tailles du site sont ici : pour
    changer l'apparence, on modifie ce fichier.
-   ============================================================ */
+    */
 
 :root {
   /* ---------- COULEURS ---------- */
@@ -29,13 +29,16 @@
   --ok: #0E7A4F;            /* vert : uniquement "Obtenue" */
   --error: #B3261E;         /* rouge : uniquement les erreurs de formulaire */
 
-  /* ---------- TYPOGRAPHIE ---------- */
+  /* TYPOGRAPHIE */
   /* Une seule famille : Archivo. Sa police "variable" permet de
      régler la graisse (font-weight) ET la largeur (font-stretch) :
      les grands titres sont écrits en version large et très grasse,
      le texte courant en version normale. Le fichier est dans
      assets/fonts/ (voir @font-face dans base.css). */
   --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+
+/*mes tailles de texte et mes espaces utilisent clamp() : ils grandissent ou rétrécissent automatiquement avec la largeur de l’écran, entre un minimum et un maximum*/
 
   --fs-xs: clamp(0.8rem, 0.78rem + 0.1vw, 0.86rem);
   --fs-sm: clamp(0.9rem, 0.87rem + 0.15vw, 0.97rem);

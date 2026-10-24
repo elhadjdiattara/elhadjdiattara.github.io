@@ -1,16 +1,16 @@
-/* ============================================================
-   CONTACT-FORM.JS
-   ------------------------------------------------------------
-   Rôle : vérifier les champs du formulaire de contact dans le
-   navigateur, puis envoyer le message à Formspree.
+ // CONTACT-FORM.JS       Rôle : vérifier les champs du formulaire de contact dans le navigateur, 
+ // puis envoyer le message à Formspree.
 
-   IMPORTANT (à expliquer en soutenance) :
-   Ce site est 100% statique (HTML/CSS/JS, sans serveur) : il ne
-   peut pas envoyer d'email tout seul. J'utilise donc Formspree,
-   un service gratuit qui joue le rôle de serveur : le script lui
-   envoie les champs avec fetch(), et Formspree les transmet par
-   email à Elhadj.
-   ============================================================ */
+  // IMPORTANT :
+   // Ce site est 100% statique (HTML/CSS/JS, sans serveur) : il ne
+   // peut pas envoyer d'email tout seul. J'utilise donc Formspree,
+   // un service gratuit qui joue le rôle de serveur : le script lui
+   //envoie les champs avec fetch(), et Formspree les transmet par
+   // email à Elhadj.
+  
+   
+ 
+   
 
 // Adresse du formulaire créé sur formspree.io
 const FORM_ENDPOINT = "https://formspree.io/f/mnpjyzbv";

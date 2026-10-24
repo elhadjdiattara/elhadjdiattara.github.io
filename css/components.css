@@ -1,20 +1,20 @@
-/* ============================================================
+/* 
    COMPONENTS.CSS
    ------------------------------------------------------------
    Les deux blocs qui apparaissent sur TOUTES les pages :
    1. l'en-tête avec le bouton "Menu"
    2. le pied de page (précédent / suivant)
    Les styles propres à une seule page sont dans pages.css.
-   ============================================================ */
+    */
 
-/* ============================================================
+/* 
    1. EN-TÊTE ET MENU
    ------------------------------------------------------------
    Le menu est un élément HTML natif <details> : il s'ouvre et
    se ferme sans JavaScript, il fonctionne au clavier, et c'est
    le même sur ordinateur et sur mobile. Quand il est ouvert, la
    liste des pages recouvre l'écran sous l'en-tête.
-   ============================================================ */
+    */
 .header {
   position: sticky;           /* reste visible en haut quand on défile */
   top: 0;
@@ -107,12 +107,12 @@
 /* Menu ouvert : la page derrière ne défile plus */
 body:has(.menu[open]) { overflow: hidden; }
 
-/* ============================================================
+/* 
    2. PIED DE PAGE
    ------------------------------------------------------------
    Deux grands liens (page précédente / suivante) puis la ligne
    de copyright. Sur la page d'accueil, il n'y a que le copyright.
-   ============================================================ */
+    */
 .page-foot {
   border-top: 1px solid var(--line);
   padding-block: var(--space-lg) var(--space-md);

@@ -1,17 +1,13 @@
-/* ============================================================
-   PAGES.CSS
+/*PAGES.CSS
    ------------------------------------------------------------
-   Les styles propres à chaque page, dans l'ordre du menu. Les
-   règles "responsive" (@media) sont placées juste après le bloc
-   qu'elles modifient.
-   ============================================================ */
+    Les styles propres à chaque page, dans l'ordre du menu. 
+    j’utilise des règles @media (max-width: ...) : qui s’appliquent que sur les petits écrans, pour réorganiser la mise en page
 
-/* ============================================================
-   ACCUEIL
+    /* ACCUEIL
    ------------------------------------------------------------
    Un grand bloc bleu avec le nom en très grand : c'est le seul
    endroit du site où la couleur couvre une surface entière.
-   ============================================================ */
+    */
 .hero {
   background: var(--accent);
   color: #fff;
@@ -104,13 +100,12 @@
   }
 }
 
-/* ============================================================
+/* 
    À PROPOS
    ------------------------------------------------------------
    Le texte de présentation (5 à 7 lignes) est en grand, tout en
    haut : il doit se lire en 15 secondes. En dessous : la photo,
-   les infos clés, puis les trois points forts avec leur preuve.
-   ============================================================ */
+   les infos clés, puis les trois points forts avec leur preuve. */
 .about__statement {
   max-width: 60ch;
   font-size: clamp(1.15rem, 0.95rem + 1.2vw, 1.75rem);
@@ -176,12 +171,11 @@
   .about__photo { max-width: 340px; }
 }
 
-/* ============================================================
+/* 
    COMPÉTENCES
    ------------------------------------------------------------
    Sept domaines répartis sur deux colonnes : pour chaque
-   compétence, son nom et une phrase qui dit ce que j'en fais.
-   ============================================================ */
+   compétence, son nom et une phrase qui dit ce que j'en fais.*/
 .skills-columns {
   column-count: 2;
   column-gap: var(--space-xl);
@@ -234,9 +228,7 @@
   .skills-columns { column-count: 1; }
 }
 
-/* ============================================================
-   CERTIFICATIONS
-   ============================================================ */
+/*CERTIFICATIONS*/
 .certs-list {
   max-width: 52rem;
   border-top: 2px solid var(--ink);
@@ -302,12 +294,10 @@
   }
 }
 
-/* ============================================================
-   PROJETS
+/* PROJETS
    ------------------------------------------------------------
    Chaque projet : titre, objectif, technologies, puis un bouton
-   qui déplie le détail (voir js/projects.js).
-   ============================================================ */
+   qui déplie le détail (voir js/projects.js).*/
 .project {
   max-width: 58rem;
   padding-block: var(--space-lg);
@@ -395,11 +385,10 @@
   .project__details-inner { grid-template-columns: 1fr; }
 }
 
-/* ============================================================
-   PARCOURS
+/* PARCOURS
    ------------------------------------------------------------
    Liste chronologique : la période à gauche, le contenu à droite.
-   ============================================================ */
+  */
 .history {
   max-width: 60rem;
   border-top: 2px solid var(--ink);
@@ -447,13 +436,11 @@
   }
 }
 
-/* ============================================================
-   CONTACT
+/* CONTACT
    ------------------------------------------------------------
    À gauche : les coordonnées. À droite : le formulaire.
    Les classes .has-error et .is-success / .is-error sont
-   ajoutées par js/contact-form.js.
-   ============================================================ */
+   ajoutées par js/contact-form.js.*/
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);

@@ -1,9 +1,9 @@
-/* ============================================================
+/* 
    BASE.CSS
    ------------------------------------------------------------
    Police, typographie de base, mise en page générale, boutons
    et étiquettes : tout ce qui est partagé par toutes les pages.
-   ============================================================ */
+    */
 
 /* ------------------------------------------------------------
    POLICE : Archivo, hébergée dans le projet (assets/fonts/).
@@ -65,13 +65,13 @@ strong {
   outline-offset: 3px;
 }
 
-/* ============================================================
+/* 
    MISE EN PAGE GÉNÉRALE
    ------------------------------------------------------------
    Tout est aligné sur le même bord gauche, de l'en-tête au pied
    de page. Les blocs de texte ont leur propre largeur maximale
    pour rester agréables à lire.
-   ============================================================ */
+    */
 .container {
   width: 100%;
   max-width: var(--container);

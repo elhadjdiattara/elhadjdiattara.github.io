@@ -1,10 +1,10 @@
-/* ============================================================
+/* 
    RESET.CSS
    ------------------------------------------------------------
    Un "reset" enlève les styles par défaut que chaque navigateur
    applique différemment (marges, tailles de police, listes...).
    On repart d'une base neutre et identique partout.
-   ============================================================ */
+    */
 
 *,
 *::before,

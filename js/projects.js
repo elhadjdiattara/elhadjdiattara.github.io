@@ -1,14 +1,9 @@
-/* ============================================================
+/* 
    PROJECTS.JS
    ------------------------------------------------------------
    Rôle : gérer le "voir le détail / masquer le détail" de
    chaque projet. Utilisé uniquement sur projects.html.
-
-   Technique : on ne peut pas animer "height: auto" directement
-   en CSS. L'astuce consiste à mesurer la hauteur réelle du
-   contenu avec "scrollHeight", puis à l'utiliser comme valeur
-   cible pour "max-height" -> cela permet une transition fluide.
-   ============================================================ */
+    */
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggles = document.querySelectorAll("[data-project-toggle]");

@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--viewport, dit au téléphone d’utiliser sa vraie largeur 
+  au lieu d’afficher le site rétréci comme sur un grand écran-->
   <title>À propos — Elhadj Diattara</title>
   <meta name="description" content="Parcours et motivation d'Elhadj Diattara, étudiant en Administration Systèmes, Réseaux et Cybersécurité à l'IPSSI Paris." />
 
@@ -16,7 +17,7 @@
 <body>
 
   <!-- ============================================================
-       EN-TÊTE : le bouton "Menu" est un élément <details> natif,
+       EN-TÊTE : le bouton Menu est un élément <details> natif,
        identique sur ordinateur et sur mobile.
        ============================================================ -->
   <header class="header">
@@ -45,8 +46,8 @@
          PRÉSENTATION (méthode P.R.O.F.)
          P : nom, formation, année          R : ce qui m'intéresse
          O : mon objectif                   F : mes forces
-         Le texte fait 5 à 7 lignes et se lit en 15 secondes.
          ============================================================ -->
+         
     <section class="section">
       <div class="container">
         <h1 class="page-intro__title">À propos</h1>
@@ -72,7 +73,7 @@
           </dl>
         </div>
 
-        <!-- Mes forces, en quelques mots (celles de mon CV) -->
+        <!-- Mes forces, en quelques mots  -->
         <div>
           <h2 class="about__h2">Mes points forts</h2>
           <ul class="strengths">
@@ -102,6 +103,15 @@
     </footer>
   </main>
 
+
+  <!--Pour mes icônes, j’ai utilisé des SVG, des dessins faits en code. 
+  Je les définis une fois en bas de la page, dans une boîte cachée, 
+  et chaque bouton les réutilise avec une ligne "use". 
+  Elles ne demandent aucun fichier à télécharger et prennent la couleur du texte-->
+  <!--Chaque page HTML est un fichier indépendant donc le navigateur lit une seule page à la fois, et <use href="#icon-send"> ne peut retrouver un dessin que dans la même page-->
+
+  <!--viewBox="0 0 24 24" : la grille de dessin, un carré de 24 sur 24.-->
+  <!--path d="..." : les consignes de dessin.-->
   <svg style="position:absolute; width:0; height:0; overflow:hidden" aria-hidden="true">
     <defs>
       <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><line x1="5" y1="20" x2="19" y2="20"/></symbol>

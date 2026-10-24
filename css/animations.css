@@ -1,4 +1,4 @@
-/* ============================================================
+/*
    ANIMATIONS.CSS
    ------------------------------------------------------------
    Une seule animation "d'ambiance" sur tout le site : à
@@ -8,7 +8,7 @@
    dans les autres fichiers.
    Les visiteurs qui ont désactivé les animations dans leur
    système ne voient rien bouger (règle dans reset.css).
-   ============================================================ */
+    */
 
 @keyframes rise {
   from { transform: translateY(105%); }
