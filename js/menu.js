@@ -1,15 +1,15 @@
-/* ============================================================
+/* 
    MENU.JS
    ------------------------------------------------------------
-   Rôle : tout ce qui concerne le menu de l'en-tête. Le menu
-   lui-même est un élément HTML natif <details> : il s'ouvre et
-   se ferme tout seul au clic sur "Menu", sans JavaScript.
-   Ce fichier ajoute trois petits détails :
+  Rôle : tout ce qui concerne le menu de l'en-tête. Le menu
+  lui-même est un élément HTML natif <details> : il s'ouvre et
+  se ferme tout seul au clic sur "Menu", sans JavaScript.
+  Ce fichier ajoute trois petits détails :
 
    1. Mise en évidence du lien correspondant à la page actuelle
-   2. Fermeture du menu avec la touche Échap
-   3. Année automatique dans le pied de page
-   ============================================================ */
+  2. Fermeture du menu avec la touche Échap
+  3. Année automatique dans le pied de page
+    */
 
 document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".menu");
